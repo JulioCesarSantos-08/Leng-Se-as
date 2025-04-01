@@ -1,4 +1,8 @@
-function irASeccion(id) {
-    document.getElementById('inicio').style.display = 'none';
-    document.getElementById(id).style.display = 'block';
+function irASeccion(seccion) {
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("menu").style.display = "none";
+
+    if (document.getElementById(seccion)) {
+        document.getElementById(seccion).style.display = "block";
+    }
 }
