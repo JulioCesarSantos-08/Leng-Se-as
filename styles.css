@@ -79,6 +79,76 @@ ul li {
     transform: scale(0.95);
 }
 
+/* Botón de comentarios */
+.comentarios {
+    right: 100px; /* Asegura que el botón de comentarios esté más a la izquierda que el de ayuda */
+}
+
+/* Sección de menú con fondo */
+#menu {
+    background: url('imagenes/aula.png') no-repeat center center/cover;
+    padding: 60px 20px;
+    min-height: 100vh;
+    color: white;
+}
+
+#menu h2 {
+    margin-bottom: 20px;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Formulario en la página de comentarios */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+form button:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+/* Diseño responsivo */
 @media (max-width: 768px) {
     .contenedor {
         padding: 20px;
@@ -96,5 +166,11 @@ ul li {
     .boton-flotante {
         padding: 12px 16px;
         font-size: 14px;
+    }
+    
+    /* Ajustes para los botones flotantes */
+    .boton-flotante, .comentarios {
+        bottom: 30px;
+        right: 20px;
     }
 }
