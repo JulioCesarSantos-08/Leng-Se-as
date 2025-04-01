@@ -1,3 +1,12 @@
+/* Fondo para la sección de inicio */
+#inicio {
+    background: url('imagenes/logoinicio.png') no-repeat center center/cover;
+    padding: 100px 20px; /* Aseguramos que la sección tenga suficiente espacio */
+    color: white;
+    text-align: center;
+}
+
+/* Otros estilos no cambian */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -67,6 +76,7 @@ ul li {
     font-size: 16px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
+    z-index: 10; /* Asegura que los botones flotantes estén encima de otros elementos */
 }
 
 .boton-flotante:hover {
@@ -82,24 +92,6 @@ ul li {
 /* Botón de comentarios */
 .comentarios {
     right: 100px; /* Asegura que el botón de comentarios esté más a la izquierda que el de ayuda */
-}
-
-/* Sección de menú con fondo */
-#menu {
-    background: url('imagenes/aula.png') no-repeat center center/cover;
-    padding: 60px 20px;
-    min-height: 100vh;
-    color: white;
-}
-
-#menu h2 {
-    margin-bottom: 20px;
-}
-
-#menu ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 /* Formulario en la página de comentarios */
@@ -172,5 +164,28 @@ form button:active {
     .boton-flotante, .comentarios {
         bottom: 30px;
         right: 20px;
+    }
+
+    /* Si los botones flotantes aún se superponen, cambia su posición */
+    .boton-flotante {
+        bottom: 80px;  /* Coloca el botón de ayuda un poco más arriba */
+    }
+
+    .comentarios {
+        bottom: 30px; /* Coloca el de comentarios justo debajo del de ayuda */
+    }
+
+    /* Ajustes generales para la página */
+    .contenedor {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    button, .boton-volver, ul li a {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }
