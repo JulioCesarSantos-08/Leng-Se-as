@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Lenguaje de Señas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="inicio">
+        <div class="contenedor">
+            <img src="imagenes/logo.png" alt="Logo del sitio" class="logo">
+            <h1>Bienvenidos al aprendizaje del Lenguaje de Señas</h1>
+            <button onclick="irASeccion('menu')">Iniciar</button>
+        </div>
+    </section>
+    
+    <section id="menu" style="display: none;">
+        <div class="contenedor">
+            <h2>Explora nuestras opciones</h2>
+            <ul>
+                <li><a href="#">Foro de Aprendizaje</a></li>
+                <li><a href="#">Minijuego Interactivo</a></li>
+                <li><a href="#">Sesiones en Vivo</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        function irASeccion(id) {
+            document.getElementById('inicio').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
