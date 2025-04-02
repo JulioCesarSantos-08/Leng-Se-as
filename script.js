@@ -22,7 +22,7 @@ let preguntas = [
         respuestaCorrecta: 'K'
     },
     {
-        imagen: 'minicuestionario/letraW.png',
+        imagen: 'minicuestionario/LetraW.png',
         opciones: ['W', 'Ñ', 'M'],
         respuestaCorrecta: 'W'
     },
