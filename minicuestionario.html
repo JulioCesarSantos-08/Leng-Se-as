@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego de Preguntas - Aprende Lenguaje de Señas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Sección del Juego de Preguntas -->
+    <section id="minijuego">
+        <div class="contenedor">
+            <h2>Minijuego de Preguntas</h2>
+            <div id="pregunta"></div>
+            <div id="opciones"></div>
+            <div id="resultado" style="display: none;">
+                <h3>Resultado: <span id="puntuacion"></span></h3>
+                <div id="errores"></div>
+                <button onclick="reintentar()">Reintentar</button>
+                <button onclick="salir()">Salir</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón para volver al menú -->
+    <button onclick="salir()">Volver al Menú</button>
+</body>
+</html>

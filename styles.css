@@ -214,33 +214,4 @@ form button:active {
         padding: 12px 16px;
         font-size: 14px;
     }
-
-    /* Ajustes para los botones flotantes */
-    .boton-flotante, .comentarios {
-        bottom: 30px;
-        right: 20px;
-    }
-
-    /* Si los botones flotantes aún se superponen, cambia su posición */
-    .boton-flotante {
-        bottom: 80px;  /* Coloca el botón de ayuda un poco más arriba */
-    }
-
-    .comentarios {
-        bottom: 30px; /* Coloca el de comentarios justo debajo del de ayuda */
-    }
-
-    /* Ajustes generales para la página */
-    .contenedor {
-        padding: 20px;
-    }
-
-    .logo {
-        width: 120px;
-    }
-
-    button, .boton-volver, ul li a {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
 }

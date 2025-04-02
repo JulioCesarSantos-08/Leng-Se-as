@@ -14,16 +14,18 @@
 
     <section id="minijuego">
         <div class="contenedor">
-            <h2>Responde correctamente, al final obtendras tu puntaje.</h2>
-            <h3>Que letra es?</h3>
+            <h2>Responde correctamente, al final obtendrás tu puntaje.</h2>
+            <h3>¿Qué letra es?</h3>
             <div id="pregunta">
-                <!-- Imagen de la mano haciendo la letra -->
+                <img id="imagen-seña" src="" alt="Letra en lenguaje de señas">
             </div>
             <div id="opciones">
-                <!-- Opciones de respuesta -->
+                <button class="opcion" onclick="verificarRespuesta(0)"></button>
+                <button class="opcion" onclick="verificarRespuesta(1)"></button>
+                <button class="opcion" onclick="verificarRespuesta(2)"></button>
             </div>
             <div id="resultado" style="display: none;">
-                <p>Tu puntuación es: <span id="puntuacion"></span>/10</p>
+                <p>Tu puntuación es: <span id="puntuacion"></span></p>
                 <button onclick="reintentar()">Reintentar</button>
                 <button onclick="salir()">Salir</button>
             </div>

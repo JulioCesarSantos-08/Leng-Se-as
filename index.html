@@ -22,10 +22,22 @@
         <div class="contenedor">
             <h2>Explora nuestras opciones</h2>
             <ul>
-                <li><a href="minijuego.html">Minijuego Interactivo</a></li>
+                <li><a href="#" onclick="mostrarMinijuegos()">Minijuegos Interactivos</a></li>
                 <li><a href="#">Sesiones en Vivo</a></li>
             </ul>
             <button onclick="irASeccion('inicio')">Volver a Inicio</button>
+        </div>
+    </section>
+
+    <!-- Sección de Minijuegos -->
+    <section id="minijuegos" style="display: none;">
+        <div class="contenedor">
+            <h2>Elige un minijuego</h2>
+            <ul>
+                <li><a href="minicuestionario.html">Preguntas</a></li>
+                <li><a href="memorama.html">Memorama</a></li>
+            </ul>
+            <button onclick="volverMenu()">Volver al Menú</button>
         </div>
     </section>
     
