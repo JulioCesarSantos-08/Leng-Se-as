@@ -76,7 +76,7 @@ function verificarRespuesta(boton, respuesta) {
     setTimeout(() => {
         preguntaActual++;
         mostrarPregunta();
-    }, 1000);
+    }, 1500);
 }
 
 // Mostrar el resultado final
