@@ -7,16 +7,11 @@ let cartas = [
     { id: 5, imagen: 'memorama/carta5.png', emparejada: false },
     { id: 6, imagen: 'memorama/carta6.png', emparejada: false },
     { id: 7, imagen: 'memorama/carta7.png', emparejada: false },
-    { id: 8, imagen: 'memorama/carta8.png', emparejada: false },
-    { id: 1, imagen: 'memorama/carta1.png', emparejada: false },
-    { id: 2, imagen: 'memorama/carta2.png', emparejada: false },
-    { id: 3, imagen: 'memorama/carta3.png', emparejada: false },
-    { id: 4, imagen: 'memorama/carta4.png', emparejada: false },
-    { id: 5, imagen: 'memorama/carta5.png', emparejada: false },
-    { id: 6, imagen: 'memorama/carta6.png', emparejada: false },
-    { id: 7, imagen: 'memorama/carta7.png', emparejada: false },
     { id: 8, imagen: 'memorama/carta8.png', emparejada: false }
 ];
+
+// Duplicar cartas para hacer las parejas
+cartas = [...cartas, ...cartas];
 
 let cartasAbiertas = [];
 let contadorDeIntentos = 0;
@@ -27,7 +22,7 @@ function mezclarCartas() {
     cartas.sort(() => Math.random() - 0.5);
 }
 
-// Función para mostrar las cartas en el tablero
+// Función para mostrar las cartas en el tablero con estructura en cuadrícula
 function mostrarCartas() {
     let tablero = document.getElementById('tablero');
     tablero.innerHTML = ''; // Limpiar el tablero
@@ -36,11 +31,11 @@ function mostrarCartas() {
         let cartaDiv = document.createElement('div');
         cartaDiv.classList.add('carta');
         cartaDiv.setAttribute('data-id', index);
-        cartaDiv.setAttribute('onclick', 'revelarCarta(this)');
+        cartaDiv.addEventListener('click', () => revelarCarta(cartaDiv));
 
         let imagen = document.createElement('img');
         imagen.src = 'memorama/reverso.png'; // Imagen del reverso de la carta
-        imagen.setAttribute('class', 'reverso');
+        imagen.classList.add('reverso');
         cartaDiv.appendChild(imagen);
 
         tablero.appendChild(cartaDiv);
@@ -52,7 +47,7 @@ function revelarCarta(cartaDiv) {
     let id = cartaDiv.getAttribute('data-id');
     let carta = cartas[id];
 
-    if (carta.emparedada || cartasAbiertas.length === 2) {
+    if (carta.emparejada || cartasAbiertas.length === 2) {
         return; // No hacer nada si ya está emparejada o si ya se abrieron dos cartas
     }
 
@@ -88,14 +83,16 @@ function verificarPareja() {
 function verificarVictoria() {
     let parejasEmparejadas = cartas.filter(carta => carta.emparejada);
     if (parejasEmparejadas.length === cartas.length) {
-        alert(`¡Felicidades, has ganado! Número de intentos: ${contadorDeIntentos}`);
-        reiniciarJuego();
+        setTimeout(() => {
+            alert(`¡Felicidades, has ganado! Número de intentos: ${contadorDeIntentos}`);
+            reiniciarJuego();
+        }, 500);
     }
 }
 
 // Función para reiniciar el juego
 function reiniciarJuego() {
-    cartas = cartas.map(carta => ({ ...carta, emparejada: false }));
+    cartas.forEach(carta => carta.emparejada = false);
     cartasAbiertas = [];
     contadorDeIntentos = 0;
     mezclarCartas();

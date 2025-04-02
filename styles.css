@@ -1,12 +1,12 @@
 /* Fondo para la sección de inicio */
 #inicio {
     background: url('imagenes/logoinicio.png') no-repeat center center/cover;
-    padding: 100px 20px; /* Aseguramos que la sección tenga suficiente espacio */
+    padding: 100px 20px;
     color: white;
     text-align: center;
 }
 
-/* Otros estilos no cambian */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -65,6 +65,7 @@ ul li {
     color: white;
 }
 
+/* Botones flotantes */
 .boton-flotante {
     position: fixed;
     bottom: 20px;
@@ -76,7 +77,7 @@ ul li {
     font-size: 16px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
-    z-index: 10; /* Asegura que los botones flotantes estén encima de otros elementos */
+    z-index: 10;
 }
 
 .boton-flotante:hover {
@@ -89,9 +90,8 @@ ul li {
     transform: scale(0.95);
 }
 
-/* Botón de comentarios */
 .comentarios {
-    right: 100px; /* Asegura que el botón de comentarios esté más a la izquierda que el de ayuda */
+    right: 100px;
 }
 
 /* Formulario en la página de comentarios */
@@ -195,23 +195,43 @@ form button:active {
     background-color: #218838;
 }
 
-/* Diseño responsivo */
+/* Estilos para el memorama */
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.carta {
+    width: 80px;
+    height: 110px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carta-volteada {
+    transform: rotateY(180deg);
+}
+
 @media (max-width: 768px) {
-    .contenedor {
-        padding: 20px;
+    #tablero {
+        max-width: 320px;
     }
-
-    .logo {
-        width: 120px;
-    }
-
-    button, .boton-volver, ul li a {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-
-    .boton-flotante {
-        padding: 12px 16px;
-        font-size: 14px;
+    .carta {
+        width: 70px;
+        height: 100px;
     }
 }
