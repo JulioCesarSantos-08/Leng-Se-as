@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego de Lenguaje de Señas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Minijuego de Lenguaje de Señas</h1>
+    </header>
+
+    <section id="minijuego">
+        <div class="contenedor">
+            <h2>Responde correctamente, al final obtendras tu puntaje.</h2>
+            <h3>Que letra es?</h3>
+            <div id="pregunta">
+                <!-- Imagen de la mano haciendo la letra -->
+            </div>
+            <div id="opciones">
+                <!-- Opciones de respuesta -->
+            </div>
+            <div id="resultado" style="display: none;">
+                <p>Tu puntuación es: <span id="puntuacion"></span>/10</p>
+                <button onclick="reintentar()">Reintentar</button>
+                <button onclick="salir()">Salir</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

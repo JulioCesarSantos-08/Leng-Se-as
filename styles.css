@@ -140,26 +140,81 @@ form button:active {
     transform: scale(0.95);
 }
 
+/* Estilos para el minijuego */
+#minijuego {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#minijuego h2 {
+    margin-bottom: 20px;
+}
+
+#minijuego #pregunta img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#minijuego #opciones button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#minijuego #opciones button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#minijuego #opciones button:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+#minijuego #resultado button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#minijuego #resultado button:hover {
+    background-color: #218838;
+}
+
 /* Diseño responsivo */
 @media (max-width: 768px) {
     .contenedor {
         padding: 20px;
     }
-    
+
     .logo {
         width: 120px;
     }
-    
+
     button, .boton-volver, ul li a {
         font-size: 14px;
         padding: 10px 15px;
     }
-    
+
     .boton-flotante {
         padding: 12px 16px;
         font-size: 14px;
     }
-    
+
     /* Ajustes para los botones flotantes */
     .boton-flotante, .comentarios {
         bottom: 30px;
