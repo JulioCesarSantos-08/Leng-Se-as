@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprende Lenguaje de Señas</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Sección de Inicio -->
     <section id="inicio">
         <div class="contenedor">
             <img src="imagenes/logo.png" alt="Logo del sitio" class="logo">
@@ -15,6 +17,7 @@
         </div>
     </section>
     
+    <!-- Sección de Menú (Oculta por defecto) -->
     <section id="menu" style="display: none;">
         <div class="contenedor">
             <h2>Explora nuestras opciones</h2>
@@ -23,13 +26,12 @@
                 <li><a href="#">Minijuego Interactivo</a></li>
                 <li><a href="#">Sesiones en Vivo</a></li>
             </ul>
-            <a href="index.html" class="boton-volver">Volver a Inicio</a>
+            <button onclick="irASeccion('inicio')">Volver a Inicio</button>
         </div>
     </section>
     
+    <!-- Botones flotantes -->
     <a href="ayuda.html" class="boton-flotante">Ayuda</a>
     <a href="comentarios.html" class="boton-flotante comentarios">Comentarios</a>
-    
-    <script src="script.js"></script>
 </body>
 </html>
