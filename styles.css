@@ -65,6 +65,14 @@ ul li {
     color: white;
 }
 
+/* Fondo exclusivo para la página del memorama */
+body.memorama {
+    background-image: url('imagenes/fondmemo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 /* Botones flotantes */
 .boton-flotante {
     position: fixed;

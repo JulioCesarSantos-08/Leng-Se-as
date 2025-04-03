@@ -6,7 +6,7 @@
     <title>Memorama - Lenguaje de Señas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="memorama">
     <header>
         <h1>Memorama de Lenguaje de Señas</h1>
     </header>
@@ -14,10 +14,17 @@
     <section id="memorama">
         <div class="contenedor">
             <h2>Encuentra las parejas correctas</h2>
+            
+            <!-- Contadores de intentos y pares encontrados -->
+            <p id="contador-intentos">Intentos: 0</p>
+            <p id="contador-pares">Pares encontrados: 0</p>
+
             <div id="tablero">
                 <!-- Aquí se generarán las cartas del memorama -->
             </div>
+            
             <button id="reiniciar">Reiniciar</button>
+            <a href="index.html" class="boton-volver">Volver a Inicio</a>
         </div>
     </section>
 

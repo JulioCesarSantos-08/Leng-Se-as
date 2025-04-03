@@ -15,7 +15,6 @@ cartas = [...cartas, ...cartas];
 
 let cartasAbiertas = [];
 let contadorDeIntentos = 0;
-let totalParejas = cartas.length / 2;
 let parejasEncontradas = 0;
 
 // Mezclar las cartas de manera aleatoria
@@ -84,18 +83,22 @@ function verificarPareja() {
     }
 }
 
-// Función para actualizar el contador de parejas encontradas
+// Función para actualizar los contadores de intentos y parejas encontradas
 function actualizarContador() {
     let contadorPares = document.getElementById('contador-pares');
+    let contadorIntentos = document.getElementById('contador-intentos');
+
     if (contadorPares) {
         contadorPares.textContent = `Pares encontrados: ${parejasEncontradas}`;
+    }
+    if (contadorIntentos) {
+        contadorIntentos.textContent = `Intentos: ${contadorDeIntentos}`;
     }
 }
 
 // Función para verificar si el jugador ha ganado
 function verificarVictoria() {
-    let parejasEmparejadas = cartas.filter(carta => carta.emparejada);
-    if (parejasEmparejadas.length === cartas.length) {
+    if (parejasEncontradas === cartas.length / 2) {
         setTimeout(() => {
             alert(`¡Felicidades, has ganado! Número de intentos: ${contadorDeIntentos}`);
             reiniciarJuego();
@@ -117,4 +120,7 @@ function reiniciarJuego() {
 document.addEventListener('DOMContentLoaded', () => {
     mezclarCartas();
     mostrarCartas();
+    
+    // Agregar evento al botón de reinicio
+    document.getElementById('reiniciar').addEventListener('click', reiniciarJuego);
 });
