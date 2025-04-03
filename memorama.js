@@ -16,6 +16,7 @@ cartas = [...cartas, ...cartas];
 let cartasAbiertas = [];
 let contadorDeIntentos = 0;
 let totalParejas = cartas.length / 2;
+let parejasEncontradas = 0;
 
 // Mezclar las cartas de manera aleatoria
 function mezclarCartas() {
@@ -34,12 +35,14 @@ function mostrarCartas() {
         cartaDiv.addEventListener('click', () => revelarCarta(cartaDiv));
 
         let imagen = document.createElement('img');
-        imagen.src = 'memorama/reverso.png'; // Imagen del reverso de la carta
+        imagen.src = 'imagenes/cartmemo.png'; // Imagen del reverso de la carta
         imagen.classList.add('reverso');
         cartaDiv.appendChild(imagen);
 
         tablero.appendChild(cartaDiv);
     });
+
+    actualizarContador();
 }
 
 // Función para revelar la carta
@@ -67,15 +70,25 @@ function verificarPareja() {
     if (carta1.carta.id === carta2.carta.id) {
         carta1.carta.emparejada = true;
         carta2.carta.emparejada = true;
+        parejasEncontradas++;
+        actualizarContador();
         cartasAbiertas = [];
         verificarVictoria();
     } else {
         // Si no es una pareja, ocultamos las cartas después de un corto retraso
         setTimeout(() => {
-            carta1.cartaDiv.querySelector('img').src = 'memorama/reverso.png';
-            carta2.cartaDiv.querySelector('img').src = 'memorama/reverso.png';
+            carta1.cartaDiv.querySelector('img').src = 'imagenes/cartmemo.png';
+            carta2.cartaDiv.querySelector('img').src = 'imagenes/cartmemo.png';
             cartasAbiertas = [];
         }, 1000);
+    }
+}
+
+// Función para actualizar el contador de parejas encontradas
+function actualizarContador() {
+    let contadorPares = document.getElementById('contador-pares');
+    if (contadorPares) {
+        contadorPares.textContent = `Pares encontrados: ${parejasEncontradas}`;
     }
 }
 
@@ -95,6 +108,7 @@ function reiniciarJuego() {
     cartas.forEach(carta => carta.emparejada = false);
     cartasAbiertas = [];
     contadorDeIntentos = 0;
+    parejasEncontradas = 0;
     mezclarCartas();
     mostrarCartas();
 }
