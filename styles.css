@@ -58,6 +58,36 @@ ul li {
     margin: 10px 0;
 }
 
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
 #menu {
     background: url('imagenes/aula.png') no-repeat center center/cover;
     padding: 60px 20px;
