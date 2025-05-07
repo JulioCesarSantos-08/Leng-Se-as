@@ -111,8 +111,8 @@ function reintentar() {
 
     // Restaurar el color y habilitar los botones de opciones
     document.querySelectorAll('.opcion').forEach(btn => {
-        btn.style.backgroundColor = ''; // Reiniciar el color
-        btn.disabled = false; // Habilitar los botones nuevamente
+        btn.style.backgroundColor = '';
+        btn.disabled = false;
     });
 
     document.getElementById('resultado').style.display = 'none';
@@ -122,24 +122,13 @@ function reintentar() {
     mostrarPregunta();
 }
 
-// Volver al menú
+// Volver al menú (redirección actualizada)
 function salir() {
-    window.location.href = 'index.html'; // Regresar al menú principal
+    window.location.href = 'https://ihc-beta.vercel.app';
 }
 
 // Mostrar la primera pregunta cuando se inicie el juego
 mostrarPregunta();
-
-// Función para navegar entre secciones con desplazamiento suave
-function irASeccion(seccion) {
-    if (seccion === 'menu') {
-        document.getElementById('inicio').style.display = 'none';
-        document.getElementById('menu').style.display = 'block';
-    } else if (seccion === 'inicio') {
-        document.getElementById('menu').style.display = 'none';
-        document.getElementById('inicio').style.display = 'block';
-    }
-}
 
 // Mostrar la sección de minijuegos
 function mostrarMinijuegos() {
