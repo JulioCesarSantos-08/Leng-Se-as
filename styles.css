@@ -179,8 +179,19 @@ form button:active {
 }
 
 /* Estilos para el minijuego */
+body {
+    background-image: url('imagenes/fondo3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 #minijuego {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.6); /* Blanco semitransparente */
+    backdrop-filter: blur(5px); /* Efecto cristal difuminado */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -233,6 +244,7 @@ form button:active {
     background-color: #218838;
 }
 
+
 /* Estilos para el memorama */
 #tablero {
     display: grid;
@@ -272,4 +284,14 @@ form button:active {
         width: 70px;
         height: 100px;
     }
+}
+
+body {
+    background-image: url('imagenes/fondo3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; /* Ocupa el alto total de la ventana */
+    margin: 0; /* Quita cualquier margen por defecto */
+    padding: 0;
 }
