@@ -124,7 +124,7 @@ function reintentar() {
 
 // Volver al menú (redirección actualizada)
 function salir() {
-    window.location.href = 'https://ihc-nu.vercel.app/';
+    window.location.href = 'https://ihc-liard.vercel.app/juegos';
 }
 
 // Mostrar la primera pregunta cuando se inicie el juego
