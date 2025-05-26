@@ -124,7 +124,7 @@ function reintentar() {
 
 // Volver al menú (redirección actualizada)
 function salir() {
-    window.location.href = 'https://ihc-pearl.vercel.app';
+    window.location.href = 'https://github.com/FaridPer/LSM';
 }
 
 // Mostrar la primera pregunta cuando se inicie el juego
