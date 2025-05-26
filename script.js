@@ -124,7 +124,7 @@ function reintentar() {
 
 // Volver al menú (redirección actualizada)
 function salir() {
-    window.location.href = 'https://faridper.github.io/LSM/';
+    window.location.href = 'https://faridper.github.io/LSM/juegos/';
 }
 
 // Mostrar la primera pregunta cuando se inicie el juego
